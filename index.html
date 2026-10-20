@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102a43">
+<title>ITCS Cricket — Demo</title>
+<style>
+:root{--navy:#102a43;--blue:#173f5f;--green:#138a58;--light:#f2f6f8;--text:#172b3a;--muted:#657786}
+*{box-sizing:border-box}body{margin:0;background:var(--light);font-family:Arial,Helvetica,sans-serif;color:var(--text)}
+header{background:var(--navy);color:#fff;padding:18px 16px 22px;border-bottom:4px solid var(--green)}
+.wrap{max-width:980px;margin:auto} .brand{font-size:24px;font-weight:800;letter-spacing:.4px}.sub{font-size:12px;color:#c9d8e4;margin-top:5px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}nav button{border:1px solid #537087;background:transparent;color:#fff;border-radius:8px;padding:9px 12px;font-weight:700}
+nav button.active{background:var(--green);border-color:var(--green)}
+main{max-width:980px;margin:18px auto;padding:0 12px}.notice{background:#fff7df;border:1px solid #f0d58a;border-radius:10px;padding:12px;font-size:13px;line-height:1.5;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.card{background:white;border:1px solid #e0e7ed;border-radius:13px;padding:16px;box-shadow:0 3px 10px #102a4308}
+.label{font-size:11px;letter-spacing:1px;font-weight:800;color:var(--green)}.matchtitle{font-size:14px;font-weight:700;margin:9px 0;color:var(--muted)}.score{font-size:24px;font-weight:800;margin:8px 0}.meta{font-size:13px;color:var(--muted);line-height:1.7}.tag{display:inline-block;border-radius:5px;background:#e7f6ee;color:#087545;padding:4px 7px;font-size:11px;font-weight:800}
+h2{font-size:19px;margin:20px 0 12px}.team{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #edf1f4;padding:12px 0}.team:last-child{border:0}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:10px 7px;border-bottom:1px solid #edf1f4}th{background:#f7fafc;color:#536575}
+footer{text-align:center;padding:25px;color:var(--muted);font-size:12px}
+@media(max-width:440px){.brand{font-size:21px}.score{font-size:21px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="brand">🏏 ITCS CRICKET</div><div class="sub">INDIAN TENNIS CRICKET SANGH · LEAGUE DEMO</div>
+<nav><button class="active" data-tab="home">HOME</button><button data-tab="matches">MATCHES</button><button data-tab="points">POINTS TABLE</button><button data-tab="teams">TEAMS</button></nav>
+</div></header>
+<main>
+<div class="notice"><b>DEMO MODE:</b> यह नमूना स्क्रीन है। नीचे का स्कोर असली लाइव मैच का स्कोर नहीं है और अभी ऑनलाइन डेटाबेस से जुड़ा नहीं है।</div>
+<section id="home">
+<h2>Featured Match</h2><div class="grid">
+<div class="card"><span class="tag">SAMPLE SCORE</span><div class="matchtitle">ITCS LEAGUE · GROUP A</div><div class="score">Kolayat Royals 142/5</div><div class="meta">18.0 overs · vs Bajju Warriors</div><div class="meta">Bajju Warriors — 96/3 (12.2 ov)</div><div class="meta">Sample target: 143 · sample data only</div></div>
+<div class="card"><span class="label">UPCOMING</span><div class="matchtitle">GROUP B · MATCH 2</div><div class="score">Hadan Strikers vs Team 6</div><div class="meta">Date and venue to be announced</div></div>
+</div>
+<h2>Latest Results</h2><div class="card"><div class="meta">अभी कोई सत्यापित मैच परिणाम उपलब्ध नहीं है। टूर्नामेंट शुरू होने पर परिणाम यहाँ दिखाए जाएँगे।</div></div>
+</section>
+<section id="matches" hidden><h2>Fixtures</h2><div class="card"><div class="team"><span>Match 1 · Group A</span><b>Kolayat Royals vs Bajju Warriors</b></div><div class="team"><span>Match 2 · Group A</span><b>Kolayat Royals vs Nokha Kings</b></div><div class="team"><span>Match 3 · Group A</span><b>Bajju Warriors vs Nokha Kings</b></div><div class="team"><span>Match 4 · Group B</span><b>Hadan Strikers vs Bithnok Challengers</b></div><div class="team"><span>Match 5 · Group B</span><b>Hadan Strikers vs Team 6</b></div><div class="team"><span>Match 6 · Group B</span><b>Bithnok Challengers vs Team 6</b></div><p class="meta">यह सिर्फ शुरुआती fixture सूची है। Double round-robin में हर pairing का दूसरा मैच भी जोड़ा जाएगा।</p></div></section>
+<section id="points" hidden><h2>Points Table</h2><div class="card"><h3>Group A</h3><table><thead><tr><th>Team</th><th>MP</th><th>W</th><th>L</th><th>Pts</th></tr></thead><tbody><tr><td>Kolayat Royals</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Bajju Warriors</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Nokha Kings</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></tbody></table><h3>Group B</h3><table><thead><tr><th>Team</th><th>MP</th><th>W</th><th>L</th><th>Pts</th></tr></thead><tbody><tr><td>Hadan Strikers</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Bithnok Challengers</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Team 6</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></tbody></table><p class="meta">Points and NRR will be calculated from verified match score data after the scoring engine is implemented.</p></div></section>
+<section id="teams" hidden><h2>Franchises</h2><div class="card">
+<div class="team"><span>Group A · KLR</span><b>Kolayat Royals</b></div><div class="team"><span>Group A · BJW</span><b>Bajju Warriors</b></div><div class="team"><span>Group A · NKK</span><b>Nokha Kings</b></div><div class="team"><span>Group B · HDS</span><b>Hadan Strikers</b></div><div class="team"><span>Group B · BTC</span><b>Bithnok Challengers</b></div><div class="team"><span>Group B · TM6</span><b>Team 6 (temporary name)</b></div>
+</div></section>
+</main><footer>ITCS Cricket · Starter demo · Not affiliated with Cricbuzz</footer>
+<script>
+const buttons=[...document.querySelectorAll('nav button')];
+buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('main section').forEach(s=>s.hidden=s.id!==b.dataset.tab)}));
+</script>
+</body></html>
